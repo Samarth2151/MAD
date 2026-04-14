@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sam"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/i2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i1"
+        android:text="Name:Samarth Patane"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/i3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i2"
+        android:text="Hobby:Playing Cricket"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/i4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i3"
+        android:text="Language Known : Java,Python,C,C++"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/i5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i4"
+        android:text="Education"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/i6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i5"
+        android:text="SSC-Laxmidevi Prathamik Vidyamandir Sonand"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/i7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i6"
+        android:text="Diploma:Shivaji Polytechnic College Sangola"
+        android:layout_margin="5dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/i10"
+        android:layout_below="@+id/i7"
+        android:text="Click"
+        android:layout_margin="10dp" />
+
+
+</RelativeLayout>
