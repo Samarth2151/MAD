@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -19,34 +20,48 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="20dp" />
 
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
+            android:hint="Enter Name"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Enter Email"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone Number"
+            android:hint="Enter Phone"
             android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter City"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Age"
+            android:inputType="number" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:gravity="center">
 
             <Button
@@ -54,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="10dp" />
 
             <Button
                 android:id="@+id/btnLoad"
@@ -63,27 +78,11 @@
                 android:text="Load" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saved Data:"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
-
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="0,1,2"
-            android:background="#EEEEEE">
-            <!-- Headers will be added in code or here -->
-            <TableRow android:background="#CCCCCC">
-                <TextView android:text="Name" android:padding="8dp" android:textStyle="bold"/>
-                <TextView android:text="Email" android:padding="8dp" android:textStyle="bold"/>
-                <TextView android:text="Phone" android:padding="8dp" android:textStyle="bold"/>
-            </TableRow>
+            android:layout_marginTop="30dp">
         </TableLayout>
 
     </LinearLayout>
