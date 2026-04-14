@@ -1,22 +1,42 @@
-package com.example.temp1;
+package com.example.resume;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
-        findViewById(R.id.i10).setOnClickListener(v -> {
-            Intent i = getPackageManager().getLaunchIntentForPackage("com.example.temp");
-            if (i != null) {
-                startActivity(i);
-            } else {
-                Toast.makeText(this, "App not found!", Toast.LENGTH_SHORT).show();
+        Button btnOpenTempApp = findViewById(R.id.btnOpenTempApp);
+        btnOpenTempApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Replace "com.example.tempapp" with the actual package name of the application you want to open
+                String packageName = "com.example.temp";
+                Intent intent = getPackageManager().getLaunchIntentForPackage(packageName);
+                if (intent != null) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "App not found", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
